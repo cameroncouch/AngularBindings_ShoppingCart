@@ -11,8 +11,8 @@ const item = {
         deleteItem: "&"
     },
     template:`
-    <p>Item: {{$ctrl.obj.name}}</p>
-    <p>Price: {{$ctrl.obj.price | currency}}</p>
+    <p><span>Item: </span>{{$ctrl.obj.name}}</p>
+    <p><span>Price: </span>{{$ctrl.obj.price | currency}}</p>
     <button ng-click="$ctrl.addItem({item: $ctrl.obj});">Add Item</button>
     <button ng-click="$ctrl.deleteItem({item: $ctrl.obj});">Remove Item</button>
     `

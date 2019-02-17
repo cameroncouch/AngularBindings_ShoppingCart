@@ -5,16 +5,16 @@ const cart = {
     // The second ngRepeat is returning information from the item component, through < and & bindings. It is performing the same action
     // as ngRepeat #1. obj is defined in item.component, and is the holder for the returned information.
     template:`
-    <p>Total: {{$ctrl.total | currency}}</p>
-    <p>Items in your cart ({{$ctrl.shoppingcart.length}})</p>
+    <p><span>Total:</span> {{$ctrl.total | currency}}</p>
+    <p><span>Items in your cart</span> ({{$ctrl.shoppingcart.length}})</p>
     <div class="top">
     <section class="added" ng-repeat="item in $ctrl.shoppingcart track by $index">
-    <p>Item: {{item.name}}</p>
-    <p>Price: {{item.price | currency}}</p>
+    <p><span>Item:</span> {{item.name}}</p>
+    <p><span>Price:</span> {{item.price | currency}}</p>
     </section>
     </div>
     <div class="bottom">
-    <p>Available Items</p>
+    <p><span>Available Items</span></p>
     <section class="list">
     <item obj="obj" add-item="$ctrl.addItem(item);" delete-item="$ctrl.deleteItem(item);" ng-repeat="obj in $ctrl.items track by $index"></item>
     </section>
